@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const JMRMockAlertViewShowNotification;
+extern NSString *const QCOMockAlertViewShowNotification;
 
 
 /**

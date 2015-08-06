@@ -3,7 +3,7 @@
 
 #import "QCOMockActionSheet.h"
 
-NSString *const JMRMockActionSheetShowNotification = @"JMRMockActionSheetShowNotification";
+NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNotification";
 
 
 @implementation QCOMockActionSheet
@@ -37,7 +37,7 @@ NSString *const JMRMockActionSheetShowNotification = @"JMRMockActionSheetShowNot
 - (void)showInView:(UIView *)view
 {
     self.parentView = view;
-    [[NSNotificationCenter defaultCenter] postNotificationName:JMRMockActionSheetShowNotification
+    [[NSNotificationCenter defaultCenter] postNotificationName:QCOMockActionSheetShowNotification
                                                         object:self
                                                       userInfo:nil];
 }

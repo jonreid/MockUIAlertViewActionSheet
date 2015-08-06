@@ -3,7 +3,7 @@
 
 #import "QCOMockAlertView.h"
 
-NSString *const JMRMockAlertViewShowNotification = @"JMRMockAlertViewShowNotification";
+NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotification";
 
 
 @implementation QCOMockAlertView
@@ -37,7 +37,7 @@ NSString *const JMRMockAlertViewShowNotification = @"JMRMockAlertViewShowNotific
 
 - (void)show
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:JMRMockAlertViewShowNotification
+    [[NSNotificationCenter defaultCenter] postNotificationName:QCOMockAlertViewShowNotification
                                                         object:self
                                                       userInfo:nil];
 }

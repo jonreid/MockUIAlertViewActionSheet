@@ -15,7 +15,7 @@
     {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(actionSheetShown:)
-                                                     name:JMRMockActionSheetShowNotification
+                                                     name:QCOMockActionSheetShowNotification
                                                    object:nil];
     }
     return self;

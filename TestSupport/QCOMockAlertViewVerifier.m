@@ -15,7 +15,7 @@
     {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(alertShown:)
-                                                     name:JMRMockAlertViewShowNotification
+                                                     name:QCOMockAlertViewShowNotification
                                                    object:nil];
     }
     return self;
