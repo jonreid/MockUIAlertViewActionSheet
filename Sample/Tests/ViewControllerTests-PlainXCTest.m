@@ -36,7 +36,7 @@
 {
     NSArray *actions = [sut.showAlertButton actionsForTarget:sut forControlEvent:UIControlEventTouchUpInside];
 
-    XCTAssertEqual([actions count], 1);
+    XCTAssertEqual(actions.count, (NSUInteger)1);
     XCTAssertEqualObjects(actions[0], @"showAlert:");
 }
 
@@ -52,13 +52,13 @@
 
     [sut showAlert:nil];
 
-    XCTAssertEqual(alertVerifier.showCount, 1);
+    XCTAssertEqual(alertVerifier.showCount, (NSUInteger)1);
     XCTAssertEqualObjects(alertVerifier.title, @"Get Driving Directions");
     XCTAssertEqualObjects(alertVerifier.message, @"Continue to the Maps app for driving directions?");
     XCTAssertEqual(alertVerifier.delegate, sut);
     NSArray *otherButtonTitles = alertVerifier.otherButtonTitles;
     XCTAssertEqualObjects(alertVerifier.cancelButtonTitle, @"Cancel");
-    XCTAssertEqual([otherButtonTitles count], 1);
+    XCTAssertEqual([otherButtonTitles count], (NSUInteger)1);
     XCTAssertEqualObjects(otherButtonTitles[0], @"OK");
 }
 
@@ -73,7 +73,7 @@
 {
     NSArray *actions = [(sut.showActionSheetButton) actionsForTarget:sut forControlEvent:UIControlEventTouchUpInside];
 
-    XCTAssertEqual([actions count], 1);
+    XCTAssertEqual(actions.count, (NSUInteger)1);
     XCTAssertEqualObjects(actions[0], @"showActionSheet:");
 }
 
@@ -89,13 +89,13 @@
 
     [sut showActionSheet:nil];
 
-    XCTAssertEqual(sheetVerifier.showCount, 1);
+    XCTAssertEqual(sheetVerifier.showCount, (NSUInteger)1);
     XCTAssertEqual(sheetVerifier.parentView, [sut view]);
     XCTAssertEqualObjects(sheetVerifier.title, @"http://qualitycoding.org");
     XCTAssertEqual(sheetVerifier.delegate, sut);
     XCTAssertEqualObjects(sheetVerifier.cancelButtonTitle, @"Cancel");
     NSArray *otherButtonTitles = sheetVerifier.otherButtonTitles;
-    XCTAssertEqual([otherButtonTitles count], 3);
+    XCTAssertEqual([otherButtonTitles count], (NSUInteger)3);
     XCTAssertEqualObjects(otherButtonTitles[0], @"Open in Safari");
     XCTAssertEqualObjects(otherButtonTitles[1], @"Copy link");
     XCTAssertEqualObjects(otherButtonTitles[2], @"Separately added button");

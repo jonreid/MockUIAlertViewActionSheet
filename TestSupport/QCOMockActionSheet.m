@@ -28,7 +28,7 @@ NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNot
     return self;
 }
 
-- (NSInteger)addButtonWithTitle:(NSString *)title
+- (NSUInteger)addButtonWithTitle:(NSString *)title
 {
     [self.otherButtonTitles addObject:title];
     return self.otherButtonTitles.count;

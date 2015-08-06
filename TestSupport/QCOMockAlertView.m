@@ -8,8 +8,7 @@ NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotific
 
 @implementation QCOMockAlertView
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate
-  cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
+- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
 {
     self = [super init];
     if (self)
@@ -22,14 +21,14 @@ NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotific
         _otherButtonTitles = [[NSMutableArray alloc] init];
         va_list args;
         va_start(args, otherButtonTitles);
-        for (NSString *title = otherButtonTitles; title != nil; title = va_arg(args, NSString *))
-            [_otherButtonTitles addObject:title];
+        for (NSString *otherTitle = otherButtonTitles; otherTitle != nil; otherTitle = va_arg(args, NSString *))
+            [_otherButtonTitles addObject:otherTitle];
         va_end(args);
     }
     return self;
 }
 
-- (NSInteger)addButtonWithTitle:(NSString *)title
+- (NSUInteger)addButtonWithTitle:(NSString *)title
 {
     [self.otherButtonTitles addObject:title];
     return self.otherButtonTitles.count;

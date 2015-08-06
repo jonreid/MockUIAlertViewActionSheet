@@ -18,8 +18,8 @@ extern NSString *const QCOMockAlertViewShowNotification;
 @property (nonatomic, copy) NSString *cancelButtonTitle;
 @property (nonatomic, strong) NSMutableArray *otherButtonTitles;
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id /*<UIAlertViewDelegate>*/)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
-- (NSInteger)addButtonWithTitle:(NSString *)title;    // returns index of button. 0 based.
+- (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
+- (NSUInteger)addButtonWithTitle:(NSString *)title;    // returns index of button. 0 based.
 - (void)show;
 
 @end
