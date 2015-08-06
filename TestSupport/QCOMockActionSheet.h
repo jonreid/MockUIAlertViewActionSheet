@@ -1,7 +1,5 @@
-//
-//  JMRMockActionSheet.h
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
 #import <UIKit/UIKit.h>
 
@@ -10,9 +8,9 @@ extern NSString *const JMRMockActionSheetShowNotification;
 
 /**
     Inject this class in place of the UIActionSheet class.
-    Instantiate a JMRMockActionSheetVerifier before the execution phase of your test.
+    Instantiate a QCOMockActionSheetVerifier before the execution phase of your test.
  */
-@interface JMRMockActionSheet : UIView
+@interface QCOMockActionSheet : UIView
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, weak) id delegate;

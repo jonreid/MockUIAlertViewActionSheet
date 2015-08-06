@@ -1,14 +1,12 @@
-//
-//  JMRMockAlertViewVerifier.m
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
-#import "JMRMockAlertViewVerifier.h"
+#import "QCOMockAlertViewVerifier.h"
 
-#import "JMRMockAlertView.h"
+#import "QCOMockAlertView.h"
 
 
-@implementation JMRMockAlertViewVerifier
+@implementation QCOMockAlertViewVerifier
 
 - (id)init
 {
@@ -30,7 +28,7 @@
 
 - (void)alertShown:(NSNotification *)notification
 {
-    JMRMockAlertView *alert = [notification object];
+    QCOMockAlertView *alert = [notification object];
 	++_showCount;
 	self.title = alert.title;
 	self.message = alert.message;

@@ -1,14 +1,12 @@
-//
-//  JMRMockAlertView.m
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
-#import "JMRMockAlertView.h"
+#import "QCOMockAlertView.h"
 
 NSString *const JMRMockAlertViewShowNotification = @"JMRMockAlertViewShowNotification";
 
 
-@implementation JMRMockAlertView
+@implementation QCOMockAlertView
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate
   cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...

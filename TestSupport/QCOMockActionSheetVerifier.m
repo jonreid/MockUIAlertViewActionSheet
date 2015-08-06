@@ -1,14 +1,12 @@
-//
-//  JMRMockActionSheetVerifier.m
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
-#import "JMRMockActionSheetVerifier.h"
+#import "QCOMockActionSheetVerifier.h"
 
-#import "JMRMockActionSheet.h"
+#import "QCOMockActionSheet.h"
 
 
-@implementation JMRMockActionSheetVerifier
+@implementation QCOMockActionSheetVerifier
 
 - (id)init
 {
@@ -30,7 +28,7 @@
 
 - (void)actionSheetShown:(NSNotification *)notification
 {
-    JMRMockActionSheet *alert = [notification object];
+    QCOMockActionSheet *alert = [notification object];
 	++_showCount;
 	self.parentView = alert.parentView;
 	self.title = alert.title;

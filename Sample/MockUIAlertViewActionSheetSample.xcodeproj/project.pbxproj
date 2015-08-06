@@ -13,10 +13,10 @@
 		0E748FA01B6543A000B29AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E748F9E1B6543A000B29AED /* Main.storyboard */; };
 		0E748FA21B6543A000B29AED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E748FA11B6543A000B29AED /* Images.xcassets */; };
 		0E748FBE1B65487700B29AED /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E748FBC1B65487700B29AED /* OCHamcrestIOS.framework */; };
-		0E7F25801B7302FB00274E1E /* JMRMockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F25791B7302FB00274E1E /* JMRMockActionSheet.m */; };
-		0E7F25811B7302FB00274E1E /* JMRMockActionSheetVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257B1B7302FB00274E1E /* JMRMockActionSheetVerifier.m */; };
-		0E7F25821B7302FB00274E1E /* JMRMockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257D1B7302FB00274E1E /* JMRMockAlertView.m */; };
-		0E7F25831B7302FB00274E1E /* JMRMockAlertViewVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257F1B7302FB00274E1E /* JMRMockAlertViewVerifier.m */; };
+		0E7F25801B7302FB00274E1E /* QCOMockActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F25791B7302FB00274E1E /* QCOMockActionSheet.m */; };
+		0E7F25811B7302FB00274E1E /* QCOMockActionSheetVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257B1B7302FB00274E1E /* QCOMockActionSheetVerifier.m */; };
+		0E7F25821B7302FB00274E1E /* QCOMockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257D1B7302FB00274E1E /* QCOMockAlertView.m */; };
+		0E7F25831B7302FB00274E1E /* QCOMockAlertViewVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7F257F1B7302FB00274E1E /* QCOMockAlertViewVerifier.m */; };
 		609E9B9655FA38A27FF87A2D /* ViewControllerTests-OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E9314897852939CA75DFB /* ViewControllerTests-OCHamcrest.m */; };
 		609E9F1E2EC677BB9B797C36 /* ViewControllerTests-PlainXCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E96C55D81BBE28BD81748 /* ViewControllerTests-PlainXCTest.m */; };
 /* End PBXBuildFile section */
@@ -45,14 +45,14 @@
 		0E748FAF1B6543A000B29AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E748FBB1B65487700B29AED /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		0E748FBC1B65487700B29AED /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
-		0E7F25781B7302FB00274E1E /* JMRMockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRMockActionSheet.h; sourceTree = "<group>"; };
-		0E7F25791B7302FB00274E1E /* JMRMockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRMockActionSheet.m; sourceTree = "<group>"; };
-		0E7F257A1B7302FB00274E1E /* JMRMockActionSheetVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRMockActionSheetVerifier.h; sourceTree = "<group>"; };
-		0E7F257B1B7302FB00274E1E /* JMRMockActionSheetVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRMockActionSheetVerifier.m; sourceTree = "<group>"; };
-		0E7F257C1B7302FB00274E1E /* JMRMockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRMockAlertView.h; sourceTree = "<group>"; };
-		0E7F257D1B7302FB00274E1E /* JMRMockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRMockAlertView.m; sourceTree = "<group>"; };
-		0E7F257E1B7302FB00274E1E /* JMRMockAlertViewVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRMockAlertViewVerifier.h; sourceTree = "<group>"; };
-		0E7F257F1B7302FB00274E1E /* JMRMockAlertViewVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRMockAlertViewVerifier.m; sourceTree = "<group>"; };
+		0E7F25781B7302FB00274E1E /* QCOMockActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockActionSheet.h; sourceTree = "<group>"; };
+		0E7F25791B7302FB00274E1E /* QCOMockActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockActionSheet.m; sourceTree = "<group>"; };
+		0E7F257A1B7302FB00274E1E /* QCOMockActionSheetVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockActionSheetVerifier.h; sourceTree = "<group>"; };
+		0E7F257B1B7302FB00274E1E /* QCOMockActionSheetVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockActionSheetVerifier.m; sourceTree = "<group>"; };
+		0E7F257C1B7302FB00274E1E /* QCOMockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockAlertView.h; sourceTree = "<group>"; };
+		0E7F257D1B7302FB00274E1E /* QCOMockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockAlertView.m; sourceTree = "<group>"; };
+		0E7F257E1B7302FB00274E1E /* QCOMockAlertViewVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockAlertViewVerifier.h; sourceTree = "<group>"; };
+		0E7F257F1B7302FB00274E1E /* QCOMockAlertViewVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockAlertViewVerifier.m; sourceTree = "<group>"; };
 		0EFDCE171B7076200030F268 /* SampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Prefix.pch"; sourceTree = "<group>"; };
 		0EFDCE181B707B4F0030F268 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		609E9314897852939CA75DFB /* ViewControllerTests-OCHamcrest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewControllerTests-OCHamcrest.m"; sourceTree = "<group>"; };
@@ -153,14 +153,14 @@
 		0E748FC11B6585F900B29AED /* TestSupport */ = {
 			isa = PBXGroup;
 			children = (
-				0E7F25781B7302FB00274E1E /* JMRMockActionSheet.h */,
-				0E7F25791B7302FB00274E1E /* JMRMockActionSheet.m */,
-				0E7F257A1B7302FB00274E1E /* JMRMockActionSheetVerifier.h */,
-				0E7F257B1B7302FB00274E1E /* JMRMockActionSheetVerifier.m */,
-				0E7F257C1B7302FB00274E1E /* JMRMockAlertView.h */,
-				0E7F257D1B7302FB00274E1E /* JMRMockAlertView.m */,
-				0E7F257E1B7302FB00274E1E /* JMRMockAlertViewVerifier.h */,
-				0E7F257F1B7302FB00274E1E /* JMRMockAlertViewVerifier.m */,
+				0E7F25781B7302FB00274E1E /* QCOMockActionSheet.h */,
+				0E7F25791B7302FB00274E1E /* QCOMockActionSheet.m */,
+				0E7F257A1B7302FB00274E1E /* QCOMockActionSheetVerifier.h */,
+				0E7F257B1B7302FB00274E1E /* QCOMockActionSheetVerifier.m */,
+				0E7F257C1B7302FB00274E1E /* QCOMockAlertView.h */,
+				0E7F257D1B7302FB00274E1E /* QCOMockAlertView.m */,
+				0E7F257E1B7302FB00274E1E /* QCOMockAlertViewVerifier.h */,
+				0E7F257F1B7302FB00274E1E /* QCOMockAlertViewVerifier.m */,
 			);
 			name = TestSupport;
 			path = ../../TestSupport;
@@ -276,10 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				609E9B9655FA38A27FF87A2D /* ViewControllerTests-OCHamcrest.m in Sources */,
-				0E7F25831B7302FB00274E1E /* JMRMockAlertViewVerifier.m in Sources */,
-				0E7F25801B7302FB00274E1E /* JMRMockActionSheet.m in Sources */,
-				0E7F25811B7302FB00274E1E /* JMRMockActionSheetVerifier.m in Sources */,
-				0E7F25821B7302FB00274E1E /* JMRMockAlertView.m in Sources */,
+				0E7F25831B7302FB00274E1E /* QCOMockAlertViewVerifier.m in Sources */,
+				0E7F25801B7302FB00274E1E /* QCOMockActionSheet.m in Sources */,
+				0E7F25811B7302FB00274E1E /* QCOMockActionSheetVerifier.m in Sources */,
+				0E7F25821B7302FB00274E1E /* QCOMockAlertView.m in Sources */,
 				609E9F1E2EC677BB9B797C36 /* ViewControllerTests-PlainXCTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

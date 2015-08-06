@@ -2,10 +2,10 @@
 #import "ViewController.h"
 
 // Test support
-#import "JMRMockActionSheet.h"
-#import "JMRMockActionSheetVerifier.h"
-#import "JMRMockAlertView.h"
-#import "JMRMockAlertViewVerifier.h"
+#import "QCOMockActionSheet.h"
+#import "QCOMockActionSheetVerifier.h"
+#import "QCOMockAlertView.h"
+#import "QCOMockAlertViewVerifier.h"
 #import <XCTest/XCTest.h>
 
 #define HC_SHORTHAND
@@ -48,8 +48,8 @@
 
 - (void)testShowAlert
 {
-    JMRMockAlertViewVerifier *alertVerifier = [[JMRMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [JMRMockAlertView class];
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -81,8 +81,8 @@
 
 - (void)testShowActionSheet
 {
-    JMRMockActionSheetVerifier *sheetVerifier = [[JMRMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [JMRMockActionSheet class];
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 

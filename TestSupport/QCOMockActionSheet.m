@@ -1,14 +1,12 @@
-//
-//  JMRMockActionSheet.m
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
-#import "JMRMockActionSheet.h"
+#import "QCOMockActionSheet.h"
 
 NSString *const JMRMockActionSheetShowNotification = @"JMRMockActionSheetShowNotification";
 
 
-@implementation JMRMockActionSheet
+@implementation QCOMockActionSheet
 
 - (id)initWithTitle:(NSString *)title delegate:(id <UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
 {

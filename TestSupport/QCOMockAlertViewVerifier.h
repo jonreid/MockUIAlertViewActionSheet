@@ -1,15 +1,13 @@
-//
-//  JMRMockAlertViewViewVerifier.h
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
 #import <Foundation/Foundation.h>
 
 
 /**
-    Captures JMRMockAlertView arguments.
+    Captures QCOMockAlertView arguments.
  */
-@interface JMRMockAlertViewVerifier : NSObject
+@interface QCOMockAlertViewVerifier : NSObject
 
 @property (nonatomic, assign) NSUInteger showCount;
 @property (nonatomic, copy) NSString *title;

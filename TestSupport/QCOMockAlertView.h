@@ -1,7 +1,5 @@
-//
-//  JMRMockAlertView.h
-//  Copyright 2013 Jonathan M. Reid. See LICENSE.txt
-//
+//  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
+//  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
 #import <UIKit/UIKit.h>
 
@@ -10,9 +8,9 @@ extern NSString *const JMRMockAlertViewShowNotification;
 
 /**
     Inject this class in place of the UIAlertView class.
-    Instantiate a JMRMockAlertViewVerifier before the execution phase of your test.
+    Instantiate a QCOMockAlertViewVerifier before the execution phase of your test.
  */
-@interface JMRMockAlertView : UIView
+@interface QCOMockAlertView : UIView
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *message;
