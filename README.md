@@ -1,9 +1,13 @@
 # MockUIAlertViewActionSheet
 
 [![Build Status](https://travis-ci.org/jonreid/MockUIAlertViewActionSheet.svg?branch=master)](https://travis-ci.org/jonreid/MockUIAlertViewActionSheet)
+[![Coverage Status](https://coveralls.io/repos/jonreid/MockUIAlertViewActionSheet/badge.svg?branch=master&service=github)](https://coveralls.io/github/jonreid/MockUIAlertViewActionSheet?branch=master)
 
-MockUIAlertViewActionSheet lets you mock iOS alerts and action sheets for unit tests,
-based on the UIAlertController introduced for iOS 8.
+MockUIAlertViewActionSheet lets you mock iOS alerts and action sheets for unit
+tests, based on the classic (and deprecated) UIAlertView and UIActionSheet.
+
+(For new UIAlertController-based alerts, use
+[MockUIAlertController](https://github.com/jonreid/MockUIAlertController).)
 
 No actual alerts are presented. This means:
 
@@ -13,11 +17,11 @@ No actual alerts are presented. This means:
 
 ## What do I need to change in production code?
 
-To support redirection between UIAlertController and the mock, we need an extra
+To support redirection between UIAlertView and the mock, we need an extra
 layer of indirection. I use property injection:
 
 ```obj-c
-@property (nonatomic, strong) Class alertControllerClass;
+@property (nonatomic, strong) Class alertViewClass;
 ```
 
 Make sure your initializer sets the default to the real UIAlertController:
@@ -26,44 +30,47 @@ Make sure your initializer sets the default to the real UIAlertController:
 - (id)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        _alertControllerClass = [UIAlertController class];
+        _alertViewClass = [UIAlertView class];
     }
     return self;
 }
 ```
 
-Then modify any calls to UIAlertController that you want to make unit-testable.
-Replace `UIAlertController` with `self.alertControllerClass`:
+Then modify any calls to UIAlertView that you want to make unit-testable.
+Replace `UIAlertView` with `self.alertViewClass`:
 
 ```obj-c
-UIAlertController *alertController =
-        [self.alertControllerClass alertControllerWithTitle:@"Title"
-                                                    message:@"Message"
-                                             preferredStyle:UIAlertControllerStyleAlert];
+UIAlertView *alertView = [(UIAlertView *)[self.alertViewClass alloc]
+                          initWithTitle:@"Get Driving Directions"
+                          message:@"Continue to the Maps app for driving directions?"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"OK", nil];
+[alertView show];
 ```
  
 
 ## What can I test?
 
 For starters, make sure you have a test verifying the default value of
-`alertControllerClass`.
+`alertViewClass`.
 
 In other tests:
 
-1. Instantiate a `QCOMockAlertVerifier` before the execution phase of the test.
-2. Inject `QCOMockAlertController` as the `alertControllerClass`.
-3. Invoke the code to create and present your alert or action sheet.
+1. Instantiate a `QCOMockAlertViewVerifier` before the execution phase of the test.
+2. Inject `QCOMockAlertView` as the `alertViewClass`.
+3. Invoke the code to create and present your alert.
 
-Information about the alert or action sheet is then available through the
-[QCOMockAlertVerifier](https://github.com/jonreid/MockUIAlertController/blob/master/TestSupport/QCOMockAlertVerifier.h).
+Information about the alert is then available through the
+QCOMockAlertViewVerifier.
 
 For example, here's a test verifying the title. `sut` is the system under test
 in the test fixture.
 
 ```obj-c
 - (void)testShowAlert_PresentedAlertShouldHaveTitle {
-    QCOMockAlertVerifier *alertVerifier = [[QCOMockAlertVerifier alloc] init];
-    sut.alertControllerClass = [QCOMockAlertController class];
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
