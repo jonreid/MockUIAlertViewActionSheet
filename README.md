@@ -62,7 +62,7 @@ In other tests:
 3. Invoke the code to create and present your alert.
 
 Information about the alert is then available through the
-QCOMockAlertViewVerifier.
+[QCOMockAlertViewVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/TestSupport/QCOMockAlertViewVerifier.h).
 
 For example, here's a test verifying the title. `sut` is the system under test
 in the test fixture.
