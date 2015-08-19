@@ -29,7 +29,7 @@
 - (void)alertShown:(NSNotification *)notification
 {
     QCOMockAlertView *alert = [notification object];
-	++_showCount;
+    self.showCount += 1;
 	self.title = alert.title;
 	self.message = alert.message;
 	self.delegate = alert.delegate;

@@ -29,7 +29,7 @@
 - (void)actionSheetShown:(NSNotification *)notification
 {
     QCOMockActionSheet *alert = [notification object];
-	++_showCount;
+    self.showCount += 1;
 	self.parentView = alert.parentView;
 	self.title = alert.title;
 	self.delegate = alert.delegate;
