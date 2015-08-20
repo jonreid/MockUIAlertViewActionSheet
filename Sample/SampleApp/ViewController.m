@@ -23,6 +23,7 @@
                               delegate:self
                               cancelButtonTitle:@"Cancel"
                               otherButtonTitles:@"OK", nil];
+    [alertView addButtonWithTitle:@"Separately added button"];
     [alertView show];
 }
 

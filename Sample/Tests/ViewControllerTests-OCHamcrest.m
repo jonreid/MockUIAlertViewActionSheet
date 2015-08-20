@@ -58,7 +58,7 @@
     assertThat(alertVerifier.message, is(@"Continue to the Maps app for driving directions?"));
     assertThat(alertVerifier.delegate, is(sameInstance(sut)));
     assertThat(alertVerifier.cancelButtonTitle, is(@"Cancel"));
-    assertThat(alertVerifier.otherButtonTitles, contains(@"OK", nil));
+    assertThat(alertVerifier.otherButtonTitles, contains(@"OK", @"Separately added button", nil));
 }
 
 #pragma mark Action Sheet Tests

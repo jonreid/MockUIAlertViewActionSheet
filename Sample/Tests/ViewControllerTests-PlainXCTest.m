@@ -58,8 +58,9 @@
     XCTAssertEqual(alertVerifier.delegate, sut);
     NSArray *otherButtonTitles = alertVerifier.otherButtonTitles;
     XCTAssertEqualObjects(alertVerifier.cancelButtonTitle, @"Cancel");
-    XCTAssertEqual([otherButtonTitles count], (NSUInteger)1);
+    XCTAssertEqual([otherButtonTitles count], (NSUInteger)2);
     XCTAssertEqualObjects(otherButtonTitles[0], @"OK");
+    XCTAssertEqualObjects(otherButtonTitles[1], @"Separately added button");
 }
 
 #pragma mark Action Sheet Tests
