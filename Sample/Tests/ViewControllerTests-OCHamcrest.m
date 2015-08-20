@@ -32,21 +32,27 @@
 
 - (void)testShowAlertButton_ShouldBeConnected
 {
-    assertThat(sut.showAlertButton, is(notNilValue()));
+    UIButton *button = sut.showAlertButton;
+    
+    assertThat(button, is(notNilValue()));
 }
 
-- (void)testShowAlertButtonAction
+- (void)testShowAlertButton_ShouldHaveAction
 {
-    assertThat([sut.showAlertButton actionsForTarget:sut forControlEvent:UIControlEventTouchUpInside],
-               contains(@"showAlert:", nil));
+    NSArray *touchUpActions = [sut.showAlertButton actionsForTarget:sut
+                                                    forControlEvent:UIControlEventTouchUpInside];
+
+    assertThat(touchUpActions, contains(@"showAlert:", nil));
 }
 
-- (void)testDefaultAlertViewClass
+- (void)testDefaultAlertViewClass_ShouldBeUIAlertView
 {
-    assertThat(sut.alertViewClass, is([UIAlertView class]));
+    Class aClass = sut.alertViewClass;
+    
+    assertThat(aClass, is([UIAlertView class]));
 }
 
-- (void)testShowAlert
+- (void)testShowAlert_ShouldPresentAlert
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
     sut.alertViewClass = [QCOMockAlertView class];
@@ -54,10 +60,55 @@
     [sut showAlert:nil];
 
     assertThat(@(alertVerifier.showCount), is(equalTo(@1)));
+}
+
+- (void)testShowAlert_AlertShouldHaveTitle
+{
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
+
+    [sut showAlert:nil];
+
     assertThat(alertVerifier.title, is(@"Get Driving Directions"));
+}
+
+- (void)testShowAlert_AlertShouldHaveMessage
+{
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
+
+    [sut showAlert:nil];
+
     assertThat(alertVerifier.message, is(@"Continue to the Maps app for driving directions?"));
+}
+
+- (void)testShowAlert_AlertShouldHaveDelegate
+{
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
+
+    [sut showAlert:nil];
+
     assertThat(alertVerifier.delegate, is(sameInstance(sut)));
+}
+
+- (void)testShowAlert_AlertShouldHaveCancelButton
+{
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
+
+    [sut showAlert:nil];
+
     assertThat(alertVerifier.cancelButtonTitle, is(@"Cancel"));
+}
+
+- (void)testShowAlert_AlertShouldHaveOtherButtons
+{
+    QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
+    sut.alertViewClass = [QCOMockAlertView class];
+
+    [sut showAlert:nil];
+
     assertThat(alertVerifier.otherButtonTitles, contains(@"OK", @"Separately added button", nil));
 }
 
@@ -65,21 +116,27 @@
 
 - (void)testShowActionSheetButton_ShouldBeConnected
 {
-    assertThat(sut.showActionSheetButton, is(notNilValue()));
+    UIButton *button = sut.showActionSheetButton;
+    
+    assertThat(button, is(notNilValue()));
 }
 
-- (void)testShowActionSheetButtonAction
+- (void)testShowActionSheetButton_ShouldHaveAction
 {
-    assertThat([sut.showActionSheetButton actionsForTarget:sut forControlEvent:UIControlEventTouchUpInside],
-               contains(@"showActionSheet:", nil));
+    NSArray *touchUpActions = [sut.showActionSheetButton actionsForTarget:sut
+                                                          forControlEvent:UIControlEventTouchUpInside];
+    
+    assertThat(touchUpActions, contains(@"showActionSheet:", nil));
 }
 
-- (void)testDefaultActionSheetClass
+- (void)testDefaultActionSheetClass_ShouldBeUIActionSheet
 {
-    assertThat(sut.actionSheetClass, is([UIActionSheet class]));
+    Class aClass = sut.actionSheetClass;
+
+    assertThat(aClass, is([UIActionSheet class]));
 }
 
-- (void)testShowActionSheet
+- (void)testShowActionSheet_ShouldPresentActionSheet
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
     sut.actionSheetClass = [QCOMockActionSheet class];
@@ -87,12 +144,66 @@
     [sut showActionSheet:nil];
 
     assertThat(@(sheetVerifier.showCount), is(equalTo(@1)));
+}
+
+- (void)testShowActionSheet_SheetShouldHaveParentView
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(sheetVerifier.parentView, is(sameInstance([sut view])));
+}
+
+- (void)testShowActionSheet_SheetShouldHaveTitle
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(sheetVerifier.title, is(@"http://qualitycoding.org"));;
+}
+
+- (void)testShowActionSheet_SheetShouldHaveDelegate
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(sheetVerifier.delegate, is(sameInstance(sut)));
+}
+
+- (void)testShowActionSheet_SheetShouldHaveCancelButton
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(sheetVerifier.cancelButtonTitle, is(@"Cancel"));
+}
+
+- (void)testShowActionSheet_SheetShouldHaveOtherButtons
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(sheetVerifier.otherButtonTitles,
-               contains(@"Open in Safari", @"Copy link", @"Separately added button", nil));
+            contains(@"Open in Safari", @"Copy link", @"Separately added button", nil));
+}
+
+- (void)testShowActionSheet_SheetShouldHaveStyle
+{
+    QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
+    sut.actionSheetClass = [QCOMockActionSheet class];
+
+    [sut showActionSheet:nil];
+
     assertThat(@(sheetVerifier.actionSheetStyle), is(@(UIActionSheetStyleBlackOpaque)));
 }
 
