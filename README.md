@@ -26,7 +26,8 @@ to the real UIAlertView:
 ```
 
 ```obj-c
-- (Class)alertViewClass {
+- (Class)alertViewClass
+{
     if (!_alertViewClass) {
         _alertViewClass = [UIAlertView class];
     }
