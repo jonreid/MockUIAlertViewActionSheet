@@ -17,22 +17,21 @@ No actual alerts are presented. This means:
 
 ## What do I need to change in production code?
 
-To support redirection between UIAlertView and the mock, we need an extra
-layer of indirection. I use property injection:
+To support redirection between UIAlertView and the mock, we need an extra 
+layer of indirection. I use property injection with a lazy getter that defaults
+to the real UIAlertView:
 
 ```obj-c
 @property (nonatomic, strong) Class alertViewClass;
 ```
 
-Make sure your initializer sets the default to the real UIAlertController:
-
 ```obj-c
-- (id)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
+- (Class)alertViewClass
+{
+    if (!_alertViewClass) {
         _alertViewClass = [UIAlertView class];
     }
-    return self;
+    return _alertViewClass;
 }
 ```
 

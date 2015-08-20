@@ -2,16 +2,20 @@
 
 @implementation ViewController
 
-- (id)initWithCoder:(NSCoder *)coder
+- (Class)alertViewClass
 {
-    self = [super initWithCoder:coder];
-    if (self)
-    {
-        // Use the real UIKit classes by default. Make sure you have tests verifying this.
+    // Use the real UIAlertView by default. Make sure you have a test verifying this.
+    if (!_alertViewClass)
         _alertViewClass = [UIAlertView class];
+    return _alertViewClass;
+}
+
+- (Class)actionSheetClass
+{
+    // Use the real UIActionSheet by default. Make sure you have a test verifying this.
+    if (!_actionSheetClass)
         _actionSheetClass = [UIActionSheet class];
-    }
-    return self;
+    return _actionSheetClass;
 }
 
 - (IBAction)showAlert:(id)sender
