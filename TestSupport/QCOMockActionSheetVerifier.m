@@ -36,6 +36,7 @@
 	self.cancelButtonTitle = alert.cancelButtonTitle;
 	self.destructiveButtonTitle = alert.destructiveButtonTitle;
     self.otherButtonTitles = alert.otherButtonTitles;
+    self.actionSheetStyle = alert.actionSheetStyle;
 }
 
 @end

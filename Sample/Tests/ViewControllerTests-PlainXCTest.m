@@ -100,6 +100,7 @@
     XCTAssertEqualObjects(otherButtonTitles[0], @"Open in Safari");
     XCTAssertEqualObjects(otherButtonTitles[1], @"Copy link");
     XCTAssertEqualObjects(otherButtonTitles[2], @"Separately added button");
+    XCTAssertEqual(sheetVerifier.actionSheetStyle, UIActionSheetStyleBlackOpaque);
 }
 
 @end

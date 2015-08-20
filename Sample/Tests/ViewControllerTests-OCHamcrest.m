@@ -93,6 +93,7 @@
     assertThat(sheetVerifier.cancelButtonTitle, is(@"Cancel"));
     assertThat(sheetVerifier.otherButtonTitles,
                contains(@"Open in Safari", @"Copy link", @"Separately added button", nil));
+    assertThat(@(sheetVerifier.actionSheetStyle), is(@(UIActionSheetStyleBlackOpaque)));
 }
 
 @end

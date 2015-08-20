@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *cancelButtonTitle;
 @property (nonatomic, copy) NSString *destructiveButtonTitle;
 @property (nonatomic, copy) NSArray *otherButtonTitles;
+@property (nonatomic, assign) UIActionSheetStyle actionSheetStyle;
 
 - (id)init;
 

@@ -37,6 +37,7 @@
                                   destructiveButtonTitle:nil
                                   otherButtonTitles:@"Open in Safari", @"Copy link", nil];
     [actionSheet addButtonWithTitle:@"Separately added button"];
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [actionSheet showInView:[self view]];
 }
 
