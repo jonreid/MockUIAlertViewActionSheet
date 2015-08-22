@@ -8,8 +8,8 @@
 
 NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotification";
 
-static char const * const cancelButtonTitleKey = "qcoMockAlertView_cancelButtonTitle";
-static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTitles";
+static char const * const cancelButtonTitleKey = "qcoMock_cancelButtonTitle";
+static char const * const otherButtonTitlesKey = "qcoMock_otherButtonTitles";
 
 
 @implementation UIAlertView (QCOMockAlertView)
@@ -32,13 +32,13 @@ static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTi
         self.title = title;
         self.message = message;
         self.delegate = delegate;
-        self.qcoMockAlertView_cancelButtonTitle = [cancelButtonTitle copy];
+        self.qcoMock_cancelButtonTitle = [cancelButtonTitle copy];
 
-        self.qcoMockAlertView_otherButtonTitles = [[NSMutableArray alloc] init];
+        self.qcoMock_otherButtonTitles = [[NSMutableArray alloc] init];
         va_list args;
         va_start(args, otherButtonTitles);
         for (NSString *otherTitle = otherButtonTitles; otherTitle != nil; otherTitle = va_arg(args, NSString *))
-            [self.qcoMockAlertView_otherButtonTitles addObject:otherTitle];
+            [self.qcoMock_otherButtonTitles addObject:otherTitle];
         va_end(args);
     }
     return self;
@@ -46,8 +46,8 @@ static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTi
 
 - (NSUInteger)qcoMockAlertView_addButtonWithTitle:(NSString *)title
 {
-    [self.qcoMockAlertView_otherButtonTitles addObject:title];
-    return self.qcoMockAlertView_otherButtonTitles.count;
+    [self.qcoMock_otherButtonTitles addObject:title];
+    return self.qcoMock_otherButtonTitles.count;
 }
 
 - (void)qcoMockAlertView_show
@@ -57,22 +57,22 @@ static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTi
                                                       userInfo:nil];
 }
 
-- (NSString *)qcoMockAlertView_cancelButtonTitle
+- (NSString *)qcoMock_cancelButtonTitle
 {
     return objc_getAssociatedObject(self, cancelButtonTitleKey);
 }
 
-- (void)setQcoMockAlertView_cancelButtonTitle:(NSString *)title
+- (void)setQcoMock_cancelButtonTitle:(NSString *)title
 {
     objc_setAssociatedObject(self, cancelButtonTitleKey, title, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (NSMutableArray *)qcoMockAlertView_otherButtonTitles
+- (NSMutableArray *)qcoMock_otherButtonTitles
 {
     return objc_getAssociatedObject(self, otherButtonTitlesKey);
 }
 
-- (void)setQcoMockAlertView_otherButtonTitles:(NSMutableArray *)otherTitles
+- (void)setQcoMock_otherButtonTitles:(NSMutableArray *)otherTitles
 {
     objc_setAssociatedObject(self, otherButtonTitlesKey, otherTitles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

@@ -40,8 +40,8 @@
 	self.title = alert.title;
 	self.message = alert.message;
 	self.delegate = alert.delegate;
-	self.cancelButtonTitle = alert.qcoMockAlertView_cancelButtonTitle;
-	self.otherButtonTitles = alert.qcoMockAlertView_otherButtonTitles;
+	self.cancelButtonTitle = alert.qcoMock_cancelButtonTitle;
+	self.otherButtonTitles = alert.qcoMock_otherButtonTitles;
 }
 
 @end
