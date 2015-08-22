@@ -3,7 +3,6 @@
 
 #import "QCOMockActionSheetVerifier.h"
 
-#import "QCOMockActionSheet.h"
 #import "UIActionSheet+QCOMockActionSheet.h"
 
 

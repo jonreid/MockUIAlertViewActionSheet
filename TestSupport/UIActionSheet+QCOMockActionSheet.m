@@ -3,11 +3,10 @@
 
 #import "UIActionSheet+QCOMockActionSheet.h"
 
-#import <objc/runtime.h>
-#import "QCOMockActionSheet.h"
 #import "NSObject+QCOMockAlertViewActionSheet.h"
+#import <objc/runtime.h>
 
-//NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNotification";
+NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNotification";
 
 static char const * const cancelButtonTitleKey = "qcoMock_cancelButtonTitle";
 static char const * const destructiveButtonTitleKey = "qcoMock_destructiveButtonTitle";

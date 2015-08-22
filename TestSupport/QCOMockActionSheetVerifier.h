@@ -5,7 +5,7 @@
 
 
 /**
-    Captures QCOMockActionSheet arguments.
+    Captures mock UIActionSheet arguments.
  */
 @interface QCOMockActionSheetVerifier : NSObject
 

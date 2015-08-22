@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-//extern NSString *const QCOMockActionSheetShowNotification;
+extern NSString *const QCOMockActionSheetShowNotification;
 
 
 @interface UIActionSheet (QCOMockActionSheet)

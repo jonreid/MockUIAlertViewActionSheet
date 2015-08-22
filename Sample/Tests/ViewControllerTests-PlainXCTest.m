@@ -2,7 +2,6 @@
 #import "ViewController.h"
 
 // Test support
-#import "QCOMockActionSheet.h"
 #import "QCOMockActionSheetVerifier.h"
 #import "QCOMockAlertViewVerifier.h"
 #import <XCTest/XCTest.h>
@@ -117,17 +116,9 @@
     XCTAssertEqualObjects(touchUpActions[0], @"showActionSheet:");
 }
 
-- (void)testDefaultActionSheetClass_ShouldBeUIActionSheet
-{
-    Class aClass = sut.actionSheetClass;
-    
-    XCTAssertEqualObjects(aClass, [UIActionSheet class]);
-}
-
 - (void)testShowActionSheet_ShouldPresentSheet
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -137,7 +128,6 @@
 - (void)testShowActionSheet_SheetShouldHaveParentView
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -147,7 +137,6 @@
 - (void)testShowActionSheet_SheetShouldHaveTitle
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -157,7 +146,6 @@
 - (void)testShowActionSheet_SheetShouldHaveDelegate
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -167,7 +155,6 @@
 - (void)testShowActionSheet_SheetShouldHaveCancelButton
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -177,7 +164,6 @@
 - (void)testShowActionSheet_SheetShouldHaveOtherButtons
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
@@ -191,7 +177,6 @@
 - (void)testShowActionSheet_SheetShouldHaveStyle
 {
     QCOMockActionSheetVerifier *sheetVerifier = [[QCOMockActionSheetVerifier alloc] init];
-    sut.actionSheetClass = [QCOMockActionSheet class];
 
     [sut showActionSheet:nil];
 
