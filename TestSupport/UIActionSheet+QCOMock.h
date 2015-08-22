@@ -3,13 +3,15 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const QCOMockAlertViewShowNotification;
+extern NSString *const QCOMockActionSheetShowNotification;
 
 
-@interface UIAlertView (QCOMockAlertView)
+@interface UIActionSheet (QCOMock)
 
 @property (nonatomic, copy) NSString *qcoMock_cancelButtonTitle;
+@property (nonatomic, copy) NSString *qcoMock_destructiveButtonTitle;
 @property (nonatomic, strong) NSMutableArray *qcoMock_otherButtonTitles;
+@property (nonatomic, strong) UIView *qcoMock_parentView;
 
 + (void)qcoMock_swizzle;
 

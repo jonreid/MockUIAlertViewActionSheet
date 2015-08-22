@@ -1,7 +1,7 @@
 //  MockUIAlertViewActionSheet by Jon Reid, http://qualitycoding.org/about/
 //  Copyright 2015 Jonathan M. Reid. See LICENSE.txt
 
-#import "UIActionSheet+QCOMockActionSheet.h"
+#import "UIActionSheet+QCOMock.h"
 
 #import "NSObject+QCOMockAlertViewActionSheet.h"
 #import <objc/runtime.h>
@@ -9,7 +9,7 @@
 NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNotification";
 
 
-@implementation UIActionSheet (QCOMockActionSheet)
+@implementation UIActionSheet (QCOMock)
 
 + (void)qcoMock_swizzle
 {

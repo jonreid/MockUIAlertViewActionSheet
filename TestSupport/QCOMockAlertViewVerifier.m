@@ -3,7 +3,7 @@
 
 #import "QCOMockAlertViewVerifier.h"
 
-#import "UIAlertView+QCOMockAlertView.h"
+#import "UIAlertView+QCOMock.h"
 
 
 @implementation QCOMockAlertViewVerifier
