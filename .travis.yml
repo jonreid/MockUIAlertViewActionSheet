@@ -9,4 +9,4 @@ script:
   - xctool test -project Sample/MockUIAlertViewActionSheetSample.xcodeproj -scheme MockUIAlertViewActionSheetSample -sdk iphonesimulator8.4 -destination "platform=iOS Simulator,name=iPhone 6,OS=8.4"
 
 after_success:
-  - ./coveralls.rb --exclude-folder Sample
+  - ./Coveralls-Ruby/coveralls.rb --exclude-folder Sample
