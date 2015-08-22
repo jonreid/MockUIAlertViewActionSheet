@@ -29,8 +29,8 @@ static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTi
     self = [super init];
     if (self)
     {
-        self.title = [title copy];
-        self.message = [message copy];
+        self.title = title;
+        self.message = message;
         self.delegate = delegate;
         self.qcoMockAlertView_cancelButtonTitle = [cancelButtonTitle copy];
 

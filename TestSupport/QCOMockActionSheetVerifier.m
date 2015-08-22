@@ -4,6 +4,7 @@
 #import "QCOMockActionSheetVerifier.h"
 
 #import "QCOMockActionSheet.h"
+#import "UIActionSheet+QCOMockActionSheet.h"
 
 
 @implementation QCOMockActionSheetVerifier
@@ -17,25 +18,32 @@
                                                  selector:@selector(actionSheetShown:)
                                                      name:QCOMockActionSheetShowNotification
                                                    object:nil];
+        [self swizzleMocks];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [self swizzleMocks];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)swizzleMocks
+{
+    [UIActionSheet qcoMock_swizzle];
 }
 
 - (void)actionSheetShown:(NSNotification *)notification
 {
-    QCOMockActionSheet *alert = [notification object];
+    UIActionSheet *alert = [notification object];
     self.showCount += 1;
-	self.parentView = alert.parentView;
+	self.parentView = alert.qcoMock_parentView;
 	self.title = alert.title;
 	self.delegate = alert.delegate;
-	self.cancelButtonTitle = alert.cancelButtonTitle;
-	self.destructiveButtonTitle = alert.destructiveButtonTitle;
-    self.otherButtonTitles = alert.otherButtonTitles;
+	self.cancelButtonTitle = alert.qcoMock_cancelButtonTitle;
+	self.destructiveButtonTitle = alert.qcoMock_destructiveButtonTitle;
+    self.otherButtonTitles = alert.qcoMock_otherButtonTitles;
     self.actionSheetStyle = alert.actionSheetStyle;
 }
 

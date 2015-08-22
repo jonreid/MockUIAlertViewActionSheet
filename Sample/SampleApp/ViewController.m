@@ -24,8 +24,7 @@
 
 - (IBAction)showActionSheet:(id)sender
 {
-    // Allocate self.actionSheetClass instead of UIActionSheet.
-    UIActionSheet *actionSheet = [(UIActionSheet *)[self.actionSheetClass alloc]
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
                                   initWithTitle:@"http://qualitycoding.org"
                                   delegate:self
                                   cancelButtonTitle:@"Cancel"
