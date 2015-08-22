@@ -6,6 +6,11 @@
 #import "UIActionSheet+QCOMock.h"
 
 
+static void swizzleMocks(void)
+{
+    [UIActionSheet qcoMock_swizzle];
+}
+
 @implementation QCOMockActionSheetVerifier
 
 - (id)init
@@ -17,20 +22,15 @@
                                                  selector:@selector(actionSheetShown:)
                                                      name:QCOMockActionSheetShowNotification
                                                    object:nil];
-        [self swizzleMocks];
+        swizzleMocks();
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [self swizzleMocks];
+    swizzleMocks();
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)swizzleMocks
-{
-    [UIActionSheet qcoMock_swizzle];
 }
 
 - (void)actionSheetShown:(NSNotification *)notification

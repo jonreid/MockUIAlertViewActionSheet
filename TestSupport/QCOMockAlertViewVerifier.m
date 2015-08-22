@@ -6,6 +6,11 @@
 #import "UIAlertView+QCOMock.h"
 
 
+static void swizzleMocks(void)
+{
+    [UIAlertView qcoMock_swizzle];
+}
+
 @implementation QCOMockAlertViewVerifier
 
 - (id)init
@@ -17,20 +22,15 @@
                                                  selector:@selector(alertShown:)
                                                      name:QCOMockAlertViewShowNotification
                                                    object:nil];
-        [self swizzleMocks];
+        swizzleMocks();
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [self swizzleMocks];
+    swizzleMocks();
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)swizzleMocks
-{
-    [UIAlertView qcoMock_swizzle];
 }
 
 - (void)alertShown:(NSNotification *)notification
