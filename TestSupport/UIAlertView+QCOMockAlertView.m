@@ -16,12 +16,12 @@ static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTi
 
 + (void)qcoMockAlertView_swizzle
 {
-    [self replaceInstanceMethod:@selector(initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)
-                     withMethod:@selector(initQCOMockWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)];
-    [self replaceInstanceMethod:@selector(addButtonWithTitle:)
-                     withMethod:@selector(qcoMockAlertView_addButtonWithTitle:)];
-    [self replaceInstanceMethod:@selector(show)
-                     withMethod:@selector(qcoMockAlertView_show)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)
+                                                 withMethod:@selector(initQCOMockWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(addButtonWithTitle:)
+                                                 withMethod:@selector(qcoMockAlertView_addButtonWithTitle:)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(show)
+                                                 withMethod:@selector(qcoMockAlertView_show)];
 }
 
 - (id)initQCOMockWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...

@@ -18,12 +18,12 @@ static char const * const parentViewKey = "qcoMock_parentView";
 
 + (void)qcoMock_swizzle
 {
-    [self replaceInstanceMethod:@selector(initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)
-                     withMethod:@selector(initQcoMockWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)];
-    [self replaceInstanceMethod:@selector(addButtonWithTitle:)
-                     withMethod:@selector(qcoMock_addButtonWithTitle:)];
-    [self replaceInstanceMethod:@selector(showInView:)
-                     withMethod:@selector(qcoMock_showInView:)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)
+                                                 withMethod:@selector(initQcoMockWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(addButtonWithTitle:)
+                                                 withMethod:@selector(qcoMock_addButtonWithTitle:)];
+    [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(showInView:)
+                                                 withMethod:@selector(qcoMock_showInView:)];
 }
 
 - (id)initQcoMockWithTitle:(NSString *)title

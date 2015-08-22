@@ -8,7 +8,8 @@
 
 @implementation NSObject (QCOMockAlertViewActionSheet)
 
-+ (void)replaceInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector
++ (void)qcoMockAlertViewActionSheet_replaceInstanceMethod:(SEL)originalSelector
+                                               withMethod:(SEL)swizzledSelector
 {
     Method originalMethod = class_getInstanceMethod(self, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(self, swizzledSelector);

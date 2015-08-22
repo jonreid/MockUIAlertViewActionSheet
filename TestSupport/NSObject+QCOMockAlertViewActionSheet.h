@@ -6,6 +6,7 @@
 
 @interface NSObject (QCOMockAlertViewActionSheet)
 
-+ (void)replaceInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector;
++ (void)qcoMockAlertViewActionSheet_replaceInstanceMethod:(SEL)originalSelector
+                                               withMethod:(SEL)swizzledSelector;
 
 @end
