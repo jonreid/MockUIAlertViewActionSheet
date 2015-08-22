@@ -8,25 +8,20 @@
 
 NSString *const QCOMockActionSheetShowNotification = @"QCOMockActionSheetShowNotification";
 
-static char const * const cancelButtonTitleKey = "qcoMock_cancelButtonTitle";
-static char const * const destructiveButtonTitleKey = "qcoMock_destructiveButtonTitle";
-static char const * const otherButtonTitlesKey = "qcoMock_otherButtonTitles";
-static char const * const parentViewKey = "qcoMock_parentView";
-
 
 @implementation UIActionSheet (QCOMockActionSheet)
 
 + (void)qcoMock_swizzle
 {
     [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)
-                                                 withMethod:@selector(initQcoMockWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)];
+                                                 withMethod:@selector(initQCOMockWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:)];
     [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(addButtonWithTitle:)
                                                  withMethod:@selector(qcoMock_addButtonWithTitle:)];
     [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(showInView:)
                                                  withMethod:@selector(qcoMock_showInView:)];
 }
 
-- (id)initQcoMockWithTitle:(NSString *)title
+- (id)initQCOMockWithTitle:(NSString *)title
                   delegate:(id <UIActionSheetDelegate>)delegate
          cancelButtonTitle:(NSString *)cancelButtonTitle
     destructiveButtonTitle:(NSString *)destructiveButtonTitle
@@ -66,42 +61,42 @@ static char const * const parentViewKey = "qcoMock_parentView";
 
 - (NSString *)qcoMock_cancelButtonTitle
 {
-    return objc_getAssociatedObject(self, cancelButtonTitleKey);
+    return objc_getAssociatedObject(self, @selector(qcoMock_cancelButtonTitle));
 }
 
 - (void)setQcoMock_cancelButtonTitle:(NSString *)title
 {
-    objc_setAssociatedObject(self, cancelButtonTitleKey, title, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(qcoMock_cancelButtonTitle), title, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (NSString *)qcoMock_destructiveButtonTitle
 {
-    return objc_getAssociatedObject(self, destructiveButtonTitleKey);
+    return objc_getAssociatedObject(self, @selector(qcoMock_destructiveButtonTitle));
 }
 
 - (void)setQcoMock_destructiveButtonTitle:(NSString *)title
 {
-    objc_setAssociatedObject(self, destructiveButtonTitleKey, title, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(qcoMock_destructiveButtonTitle), title, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (NSMutableArray *)qcoMock_otherButtonTitles
 {
-    return objc_getAssociatedObject(self, otherButtonTitlesKey);
+    return objc_getAssociatedObject(self, @selector(qcoMock_otherButtonTitles));
 }
 
 - (void)setQcoMock_otherButtonTitles:(NSMutableArray *)otherTitles
 {
-    objc_setAssociatedObject(self, otherButtonTitlesKey, otherTitles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(qcoMock_otherButtonTitles), otherTitles, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIView *)qcoMock_parentView
 {
-    return objc_getAssociatedObject(self, parentViewKey);
+    return objc_getAssociatedObject(self, @selector(qcoMock_parentView));
 }
 
 - (void)setQcoMock_parentView:(UIView *)parentView
 {
-    objc_setAssociatedObject(self, parentViewKey, parentView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(qcoMock_parentView), parentView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
