@@ -11,6 +11,6 @@ extern NSString *const QCOMockAlertViewShowNotification;
 @property (nonatomic, copy) NSString *qcoMock_cancelButtonTitle;
 @property (nonatomic, strong) NSMutableArray *qcoMock_otherButtonTitles;
 
-+ (void)qcoMockAlertView_swizzle;
++ (void)qcoMock_swizzle;
 
 @end

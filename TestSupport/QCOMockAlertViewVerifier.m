@@ -17,20 +17,20 @@
                                                  selector:@selector(alertShown:)
                                                      name:QCOMockAlertViewShowNotification
                                                    object:nil];
-        [self swizzleMockAlertView];
+        [self swizzleMocks];
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [self swizzleMockAlertView];
+    [self swizzleMocks];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)swizzleMockAlertView
+- (void)swizzleMocks
 {
-    [UIAlertView qcoMockAlertView_swizzle];
+    [UIAlertView qcoMock_swizzle];
 }
 
 - (void)alertShown:(NSNotification *)notification

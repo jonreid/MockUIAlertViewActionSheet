@@ -14,7 +14,7 @@ static char const * const otherButtonTitlesKey = "qcoMock_otherButtonTitles";
 
 @implementation UIAlertView (QCOMockAlertView)
 
-+ (void)qcoMockAlertView_swizzle
++ (void)qcoMock_swizzle
 {
     [self qcoMockAlertViewActionSheet_replaceInstanceMethod:@selector(initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)
                                                  withMethod:@selector(initQCOMockWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:)];
