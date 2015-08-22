@@ -4,6 +4,7 @@
 #import "QCOMockAlertViewVerifier.h"
 
 #import "QCOMockAlertView.h"
+#import "UIAlertView+QCOMockAlertView.h"
 
 
 @implementation QCOMockAlertViewVerifier
@@ -17,24 +18,31 @@
                                                  selector:@selector(alertShown:)
                                                      name:QCOMockAlertViewShowNotification
                                                    object:nil];
+        [self swizzleMockAlertView];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [self swizzleMockAlertView];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)swizzleMockAlertView
+{
+    [UIAlertView qcoMockAlertView_swizzle];
 }
 
 - (void)alertShown:(NSNotification *)notification
 {
-    QCOMockAlertView *alert = [notification object];
+    UIAlertView *alert = [notification object];
     self.showCount += 1;
 	self.title = alert.title;
 	self.message = alert.message;
 	self.delegate = alert.delegate;
-	self.cancelButtonTitle = alert.cancelButtonTitle;
-	self.otherButtonTitles = alert.otherButtonTitles;
+	self.cancelButtonTitle = alert.qcoMockAlertView_cancelButtonTitle;
+	self.otherButtonTitles = alert.qcoMockAlertView_otherButtonTitles;
 }
 
 @end

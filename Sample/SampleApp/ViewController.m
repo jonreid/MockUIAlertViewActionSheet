@@ -20,8 +20,7 @@
 
 - (IBAction)showAlert:(id)sender
 {
-    // Allocate self.alertViewClass instead of UIAlertView.
-    UIAlertView *alertView = [(UIAlertView *)[self.alertViewClass alloc]
+    UIAlertView *alertView = [[UIAlertView alloc]
                               initWithTitle:@"Get Driving Directions"
                               message:@"Continue to the Maps app for driving directions?"
                               delegate:self
