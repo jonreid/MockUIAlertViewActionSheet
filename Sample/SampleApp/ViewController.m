@@ -2,14 +2,6 @@
 
 @implementation ViewController
 
-- (Class)actionSheetClass
-{
-    // Use the real UIActionSheet by default. Make sure you have a test verifying this.
-    if (!_actionSheetClass)
-        _actionSheetClass = [UIActionSheet class];
-    return _actionSheetClass;
-}
-
 - (IBAction)showAlert:(id)sender
 {
     UIAlertView *alertView = [[UIAlertView alloc]
