@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 
-//extern NSString *const QCOMockAlertViewShowNotification;
+extern NSString *const QCOMockAlertViewShowNotification;
 
 
 @interface UIAlertView (QCOMockAlertView)

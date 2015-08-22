@@ -5,7 +5,7 @@
 
 
 /**
-    Captures QCOMockAlertView arguments.
+    Captures mocked UIAlertView arguments.
  */
 @interface QCOMockAlertViewVerifier : NSObject
 

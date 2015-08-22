@@ -4,10 +4,9 @@
 #import "UIAlertView+QCOMockAlertView.h"
 
 #import "NSObject+QCOMockAlertViewActionSheet.h"
-#import "QCOMockAlertView.h"
 #import <objc/runtime.h>
 
-//NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotification";
+NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotification";
 
 static char const * const cancelButtonTitleKey = "qcoMockAlertView_cancelButtonTitle";
 static char const * const otherButtonTitlesKey = "qcoMockAlertView_otherButtonTitles";

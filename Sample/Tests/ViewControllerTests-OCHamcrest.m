@@ -4,7 +4,6 @@
 // Test support
 #import "QCOMockActionSheet.h"
 #import "QCOMockActionSheetVerifier.h"
-#import "QCOMockAlertView.h"
 #import "QCOMockAlertViewVerifier.h"
 #import <XCTest/XCTest.h>
 
