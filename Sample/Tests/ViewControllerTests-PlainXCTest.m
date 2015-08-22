@@ -43,17 +43,9 @@
     XCTAssertEqualObjects(touchUpActions[0], @"showAlert:");
 }
 
-- (void)testDefaultAlertViewClass_ShouldBeUIAlertView
-{
-    Class aClass = sut.alertViewClass;
-
-    XCTAssertEqualObjects(aClass, [UIAlertView class]);
-}
-
 - (void)testShowAlert_ShouldPresentAlert
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -63,7 +55,6 @@
 - (void)testShowAlert_ShouldHaveTitle
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -73,7 +64,6 @@
 - (void)testShowAlert_AlertShouldHaveMessage
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -83,7 +73,6 @@
 - (void)testShowAlert_AlertShouldHaveDelegate
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -93,7 +82,6 @@
 - (void)testShowAlert_AlertShouldHaveCancelButton
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 
@@ -103,7 +91,6 @@
 - (void)testShowAlert_AlertShouldHaveOtherButtons
 {
     QCOMockAlertViewVerifier *alertVerifier = [[QCOMockAlertViewVerifier alloc] init];
-    sut.alertViewClass = [QCOMockAlertView class];
 
     [sut showAlert:nil];
 

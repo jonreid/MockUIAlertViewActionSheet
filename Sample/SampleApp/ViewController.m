@@ -2,14 +2,6 @@
 
 @implementation ViewController
 
-- (Class)alertViewClass
-{
-    // Use the real UIAlertView by default. Make sure you have a test verifying this.
-    if (!_alertViewClass)
-        _alertViewClass = [UIAlertView class];
-    return _alertViewClass;
-}
-
 - (Class)actionSheetClass
 {
     // Use the real UIActionSheet by default. Make sure you have a test verifying this.
