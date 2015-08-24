@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name     = 'MockUIAlertViewActionSheet'
   s.version  = '1.0.0'
-  s.summary  = 'Mock alerts and action sheets for iOS 8 unit tests'
+  s.summary  = 'Mock classic alerts and action sheets for unit tests'
   s.description = <<-DESC
                     MockUIAlertViewActionSheet lets you mock old-style iOS alerts and action sheets for unit tests, based on the UIAlertView and UIActionSheet.
 
