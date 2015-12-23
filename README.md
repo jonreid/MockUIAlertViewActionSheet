@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/jonreid/MockUIAlertViewActionSheet.svg?branch=master)](https://travis-ci.org/jonreid/MockUIAlertViewActionSheet)
 [![Coverage Status](https://coveralls.io/repos/jonreid/MockUIAlertViewActionSheet/badge.svg?branch=master&service=github)](https://coveralls.io/github/jonreid/MockUIAlertViewActionSheet?branch=master)
 [![Cocoapods Version](https://cocoapod-badges.herokuapp.com/v/MockUIAlertViewActionSheet/badge.png)](https://cocoapods.org/pods/MockUIAlertViewActionSheet)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 MockUIAlertViewActionSheet lets you mock iOS alerts and action sheets for unit
 tests, based on the classic (and deprecated) UIAlertView and UIActionSheet.
