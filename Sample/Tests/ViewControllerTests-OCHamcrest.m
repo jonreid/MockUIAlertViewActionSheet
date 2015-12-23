@@ -4,7 +4,7 @@
 // Test support
 #import <MockUIAlertViewActionSheet/QCOMockActionSheetVerifier.h>
 #import <MockUIAlertViewActionSheet/QCOMockAlertViewVerifier.h>
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 #define HC_SHORTHAND
 #import <OCHamcrestIOS/OCHamcrestIOS.h>
