@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0E748F901B6543A000B29AED"
-               BuildableName = "MockUIAlertViewActionSheetSample.app"
-               BlueprintName = "MockUIAlertViewActionSheetSample"
-               ReferencedContainer = "container:MockUIAlertViewActionSheetSample.xcodeproj">
+               BlueprintIdentifier = "0EE234021C2A53C2005CDE32"
+               BuildableName = "MockUIAlertViewActionSheet.framework"
+               BlueprintName = "MockUIAlertViewActionSheet"
+               ReferencedContainer = "container:MockUIAlertViewActionSheet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E748F901B6543A000B29AED"
-            BuildableName = "MockUIAlertViewActionSheetSample.app"
-            BlueprintName = "MockUIAlertViewActionSheetSample"
-            ReferencedContainer = "container:MockUIAlertViewActionSheetSample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E748F901B6543A000B29AED"
-            BuildableName = "MockUIAlertViewActionSheetSample.app"
-            BlueprintName = "MockUIAlertViewActionSheetSample"
-            ReferencedContainer = "container:MockUIAlertViewActionSheetSample.xcodeproj">
+            BlueprintIdentifier = "0EE234021C2A53C2005CDE32"
+            BuildableName = "MockUIAlertViewActionSheet.framework"
+            BlueprintName = "MockUIAlertViewActionSheet"
+            ReferencedContainer = "container:MockUIAlertViewActionSheet.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0E748F901B6543A000B29AED"
-            BuildableName = "MockUIAlertViewActionSheetSample.app"
-            BlueprintName = "MockUIAlertViewActionSheetSample"
-            ReferencedContainer = "container:MockUIAlertViewActionSheetSample.xcodeproj">
+            BlueprintIdentifier = "0EE234021C2A53C2005CDE32"
+            BuildableName = "MockUIAlertViewActionSheet.framework"
+            BlueprintName = "MockUIAlertViewActionSheet"
+            ReferencedContainer = "container:MockUIAlertViewActionSheet.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
