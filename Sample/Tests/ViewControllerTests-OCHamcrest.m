@@ -2,12 +2,10 @@
 #import "ViewController.h"
 
 // Test support
+#import <OCHamcrestIOS/OCHamcrestIOS.h>
 #import <MockUIAlertViewActionSheet/QCOMockActionSheetVerifier.h>
 #import <MockUIAlertViewActionSheet/QCOMockAlertViewVerifier.h>
 @import XCTest;
-
-#define HC_SHORTHAND
-#import <OCHamcrestIOS/OCHamcrestIOS.h>
 
 
 @interface ViewControllerTests_OCHamcrest : XCTestCase
@@ -40,7 +38,7 @@
     NSArray *touchUpActions = [sut.showAlertButton actionsForTarget:sut
                                                     forControlEvent:UIControlEventTouchUpInside];
 
-    assertThat(touchUpActions, contains(@"showAlert:", nil));
+    assertThat(touchUpActions, containsIn(@[ @"showAlert:" ]));
 }
 
 - (void)testShowAlert_ShouldPresentAlert
@@ -94,7 +92,7 @@
 
     [sut showAlert:nil];
 
-    assertThat(alertVerifier.otherButtonTitles, contains(@"OK", @"Separately added button", nil));
+    assertThat(alertVerifier.otherButtonTitles, containsIn(@[ @"OK", @"Separately added button" ]));
 }
 
 #pragma mark Action Sheet Tests
@@ -111,7 +109,7 @@
     NSArray *touchUpActions = [sut.showActionSheetButton actionsForTarget:sut
                                                           forControlEvent:UIControlEventTouchUpInside];
     
-    assertThat(touchUpActions, contains(@"showActionSheet:", nil));
+    assertThat(touchUpActions, containsIn(@[ @"showActionSheet:" ]));
 }
 
 - (void)testShowActionSheet_ShouldPresentActionSheet
@@ -166,7 +164,7 @@
     [sut showActionSheet:nil];
 
     assertThat(sheetVerifier.otherButtonTitles,
-            contains(@"Open in Safari", @"Copy link", @"Separately added button", nil));
+            containsIn(@[ @"Open in Safari", @"Copy link", @"Separately added button" ]));
 }
 
 - (void)testShowActionSheet_SheetShouldHaveStyle
