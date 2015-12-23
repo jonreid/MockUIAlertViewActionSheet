@@ -17,7 +17,6 @@
 		0EE234121C2A53CA005CDE32 /* UIAlertView+QCOMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233F11C2A5340005CDE32 /* UIAlertView+QCOMock.h */; };
 		0EE234131C2A53CA005CDE32 /* UIAlertView+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233F21C2A5340005CDE32 /* UIAlertView+QCOMock.m */; };
 		0EE234141C2A5401005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233E91C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h */; };
-		0EE2341A1C2A5CC6005CDE32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE234191C2A5CC6005CDE32 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +33,6 @@
 		0EE234031C2A53C2005CDE32 /* MockUIAlertViewActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockUIAlertViewActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE234161C2A5C50005CDE32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
-		0EE234191C2A5CC6005CDE32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE2341A1C2A5CC6005CDE32 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +51,6 @@
 			children = (
 				0EE233DF1C2A5216005CDE32 /* MockUIAlertViewActionSheet */,
 				0EE234151C2A5C3E005CDE32 /* Supporting Files */,
-				0EE234181C2A5CAE005CDE32 /* Frameworks */,
 				0EE233DE1C2A5216005CDE32 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +87,6 @@
 				0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0EE234181C2A5CAE005CDE32 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0EE234191C2A5CC6005CDE32 /* UIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +187,7 @@
 			baseConfigurationReference = 0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -225,6 +214,7 @@
 			baseConfigurationReference = 0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
