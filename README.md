@@ -15,16 +15,42 @@ No actual alerts are presented. This means:
 * The workflow doesn't pause for an action to be selected
 * Tests are blazing fast.
 
+## Adding it to your project
 
-## What do I need to change in production code?
+### CocoaPods
+
+Add the following to your Podfile, changing "MyTests" to the name of your test target:
+
+```ruby
+target :MyTests, :exclusive => true do
+  pod 'MockUIAlertViewActionSheet', '~> 1.0'
+end
+```
+
+### Carthage
+
+Add the following to your Cartfile:
+
+```
+github "jonreid/MockUIAlertViewActionSheet" ~> 1.0
+```
+
+### Build It Yourself
+
+Make sure to take everything from Source/MockUIAlertViewActionSheet.
+
+
+## Writing Tests
+ 
+### What do I need to change in production code?
 
 Nothing.
- 
 
-## What can I test?
+### How do I test an alert view?
 
-1. Instantiate a `QCOMockAlertViewVerifier` before the execution phase of the test.
-2. Invoke the code to create and present your alert.
+1. `#import <MockUIAlertViewActionSheet/QCOMockAlertViewVerifier.h>`
+2. Instantiate a `QCOMockAlertViewVerifier` before the execution phase of the test.
+3. Invoke the code to create and present your alert.
 
 Information about the alert is then available through the
 [QCOMockAlertViewVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/TestSupport/QCOMockAlertViewVerifier.h).
@@ -43,6 +69,16 @@ in the test fixture.
 }
 ```
 
-See the sample app for more examples. One set of examples use
-[OCHamcrest assertions](https://github.com/hamcrest/OCHamcrest), but OCHamcrest
-is not required.
+### How do I test an action sheet?
+
+1. `#import <MockUIAlertViewActionSheet/QCOMockActionSheetVerifier.h>`
+2. Instantiate a `QCOMockActionSheetVerifier` before the execution phase of the test.
+3. Invoke the code to create and present your action sheet.
+
+Information about the action sheet is then available through the
+[QCOMockActionSheetVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/TestSupport/QCOMockActionSheetVerifier.h).
+
+
+### Can I see some examples?
+
+See the sample app. Run it to see what it does, then read the tests.
