@@ -54,7 +54,7 @@ Nothing.
 3. Invoke the code to create and present your alert.
 
 Information about the alert is then available through the
-[QCOMockAlertViewVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/TestSupport/QCOMockAlertViewVerifier.h).
+[QCOMockAlertViewVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/Source/MockUIAlertViewActionSheet/QCOMockAlertViewVerifier.h).
 
 For example, here's a test verifying the title. `sut` is the system under test
 in the test fixture.
@@ -77,7 +77,7 @@ in the test fixture.
 3. Invoke the code to create and present your action sheet.
 
 Information about the action sheet is then available through the
-[QCOMockActionSheetVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/TestSupport/QCOMockActionSheetVerifier.h).
+[QCOMockActionSheetVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/Source/MockUIAlertViewActionSheet/QCOMockActionSheetVerifier.h).
 
 
 ### Can I see some examples?

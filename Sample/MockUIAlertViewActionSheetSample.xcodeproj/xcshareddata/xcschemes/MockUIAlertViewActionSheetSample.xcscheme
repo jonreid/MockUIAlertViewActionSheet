@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0E748FA91B6543A000B29AED"
+               BuildableName = "MockUIAlertViewActionSheetSample.xctest"
+               BlueprintName = "MockUIAlertViewActionSheetSampleTests"
+               ReferencedContainer = "container:MockUIAlertViewActionSheetSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
