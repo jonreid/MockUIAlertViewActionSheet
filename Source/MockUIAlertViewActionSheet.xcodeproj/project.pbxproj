@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EE2340B1C2A53CA005CDE32 /* NSObject+QCOMockAlertViewActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233EA1C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.m */; };
+		0EE2340C1C2A53CA005CDE32 /* QCOMockActionSheetVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233EB1C2A5340005CDE32 /* QCOMockActionSheetVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EE2340D1C2A53CA005CDE32 /* QCOMockActionSheetVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233EC1C2A5340005CDE32 /* QCOMockActionSheetVerifier.m */; };
+		0EE2340E1C2A53CA005CDE32 /* QCOMockAlertViewVerifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233ED1C2A5340005CDE32 /* QCOMockAlertViewVerifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EE2340F1C2A53CA005CDE32 /* QCOMockAlertViewVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233EE1C2A5340005CDE32 /* QCOMockAlertViewVerifier.m */; };
+		0EE234101C2A53CA005CDE32 /* UIActionSheet+QCOMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233EF1C2A5340005CDE32 /* UIActionSheet+QCOMock.h */; };
+		0EE234111C2A53CA005CDE32 /* UIActionSheet+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233F01C2A5340005CDE32 /* UIActionSheet+QCOMock.m */; };
+		0EE234121C2A53CA005CDE32 /* UIAlertView+QCOMock.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233F11C2A5340005CDE32 /* UIAlertView+QCOMock.h */; };
+		0EE234131C2A53CA005CDE32 /* UIAlertView+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE233F21C2A5340005CDE32 /* UIAlertView+QCOMock.m */; };
+		0EE234141C2A5401005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE233E91C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h */; };
+		0EE2341A1C2A5CC6005CDE32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE234191C2A5CC6005CDE32 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EE233E91C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QCOMockAlertViewActionSheet.h"; sourceTree = "<group>"; };
+		0EE233EA1C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QCOMockAlertViewActionSheet.m"; sourceTree = "<group>"; };
+		0EE233EB1C2A5340005CDE32 /* QCOMockActionSheetVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockActionSheetVerifier.h; sourceTree = "<group>"; };
+		0EE233EC1C2A5340005CDE32 /* QCOMockActionSheetVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockActionSheetVerifier.m; sourceTree = "<group>"; };
+		0EE233ED1C2A5340005CDE32 /* QCOMockAlertViewVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockAlertViewVerifier.h; sourceTree = "<group>"; };
+		0EE233EE1C2A5340005CDE32 /* QCOMockAlertViewVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockAlertViewVerifier.m; sourceTree = "<group>"; };
+		0EE233EF1C2A5340005CDE32 /* UIActionSheet+QCOMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+QCOMock.h"; sourceTree = "<group>"; };
+		0EE233F01C2A5340005CDE32 /* UIActionSheet+QCOMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+QCOMock.m"; sourceTree = "<group>"; };
+		0EE233F11C2A5340005CDE32 /* UIAlertView+QCOMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+QCOMock.h"; sourceTree = "<group>"; };
+		0EE233F21C2A5340005CDE32 /* UIAlertView+QCOMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+QCOMock.m"; sourceTree = "<group>"; };
+		0EE234031C2A53C2005CDE32 /* MockUIAlertViewActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MockUIAlertViewActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE234161C2A5C50005CDE32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = XcodeWarnings.xcconfig; sourceTree = "<group>"; };
+		0EE234191C2A5CC6005CDE32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EE233FF1C2A53C2005CDE32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE2341A1C2A5CC6005CDE32 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EE233D31C2A5216005CDE32 = {
+			isa = PBXGroup;
+			children = (
+				0EE233DF1C2A5216005CDE32 /* MockUIAlertViewActionSheet */,
+				0EE234151C2A5C3E005CDE32 /* Supporting Files */,
+				0EE234181C2A5CAE005CDE32 /* Frameworks */,
+				0EE233DE1C2A5216005CDE32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0EE233DE1C2A5216005CDE32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EE234031C2A53C2005CDE32 /* MockUIAlertViewActionSheet.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EE233DF1C2A5216005CDE32 /* MockUIAlertViewActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0EE233E91C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h */,
+				0EE233EA1C2A5340005CDE32 /* NSObject+QCOMockAlertViewActionSheet.m */,
+				0EE233EB1C2A5340005CDE32 /* QCOMockActionSheetVerifier.h */,
+				0EE233EC1C2A5340005CDE32 /* QCOMockActionSheetVerifier.m */,
+				0EE233ED1C2A5340005CDE32 /* QCOMockAlertViewVerifier.h */,
+				0EE233EE1C2A5340005CDE32 /* QCOMockAlertViewVerifier.m */,
+				0EE233EF1C2A5340005CDE32 /* UIActionSheet+QCOMock.h */,
+				0EE233F01C2A5340005CDE32 /* UIActionSheet+QCOMock.m */,
+				0EE233F11C2A5340005CDE32 /* UIAlertView+QCOMock.h */,
+				0EE233F21C2A5340005CDE32 /* UIAlertView+QCOMock.m */,
+			);
+			path = MockUIAlertViewActionSheet;
+			sourceTree = "<group>";
+		};
+		0EE234151C2A5C3E005CDE32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EE234161C2A5C50005CDE32 /* Info.plist */,
+				0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EE234181C2A5CAE005CDE32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EE234191C2A5CC6005CDE32 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0EE234001C2A53C2005CDE32 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE2340C1C2A53CA005CDE32 /* QCOMockActionSheetVerifier.h in Headers */,
+				0EE2340E1C2A53CA005CDE32 /* QCOMockAlertViewVerifier.h in Headers */,
+				0EE234141C2A5401005CDE32 /* NSObject+QCOMockAlertViewActionSheet.h in Headers */,
+				0EE234121C2A53CA005CDE32 /* UIAlertView+QCOMock.h in Headers */,
+				0EE234101C2A53CA005CDE32 /* UIActionSheet+QCOMock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EE234021C2A53C2005CDE32 /* MockUIAlertViewActionSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EE234081C2A53C2005CDE32 /* Build configuration list for PBXNativeTarget "MockUIAlertViewActionSheet" */;
+			buildPhases = (
+				0EE233FE1C2A53C2005CDE32 /* Sources */,
+				0EE233FF1C2A53C2005CDE32 /* Frameworks */,
+				0EE234001C2A53C2005CDE32 /* Headers */,
+				0EE234011C2A53C2005CDE32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MockUIAlertViewActionSheet;
+			productName = MockUIAlertViewActionSheet;
+			productReference = 0EE234031C2A53C2005CDE32 /* MockUIAlertViewActionSheet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EE233D41C2A5216005CDE32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jon Reid";
+				TargetAttributes = {
+					0EE234021C2A53C2005CDE32 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 0EE233D71C2A5216005CDE32 /* Build configuration list for PBXProject "MockUIAlertViewActionSheet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0EE233D31C2A5216005CDE32;
+			productRefGroup = 0EE233DE1C2A5216005CDE32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EE234021C2A53C2005CDE32 /* MockUIAlertViewActionSheet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EE234011C2A53C2005CDE32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EE233FE1C2A53C2005CDE32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE2340B1C2A53CA005CDE32 /* NSObject+QCOMockAlertViewActionSheet.m in Sources */,
+				0EE2340D1C2A53CA005CDE32 /* QCOMockActionSheetVerifier.m in Sources */,
+				0EE234131C2A53CA005CDE32 /* UIAlertView+QCOMock.m in Sources */,
+				0EE2340F1C2A53CA005CDE32 /* QCOMockAlertViewVerifier.m in Sources */,
+				0EE234111C2A53CA005CDE32 /* UIActionSheet+QCOMock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0EE233E31C2A5216005CDE32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0EE233E41C2A5216005CDE32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EE234171C2A5C57005CDE32 /* XcodeWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0EE234091C2A53C2005CDE32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.qualitycoding.MockUIAlertViewActionSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0EE2340A1C2A53C2005CDE32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.qualitycoding.MockUIAlertViewActionSheet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EE233D71C2A5216005CDE32 /* Build configuration list for PBXProject "MockUIAlertViewActionSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EE233E31C2A5216005CDE32 /* Debug */,
+				0EE233E41C2A5216005CDE32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EE234081C2A53C2005CDE32 /* Build configuration list for PBXNativeTarget "MockUIAlertViewActionSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EE234091C2A53C2005CDE32 /* Debug */,
+				0EE2340A1C2A53C2005CDE32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EE233D41C2A5216005CDE32 /* Project object */;
+}

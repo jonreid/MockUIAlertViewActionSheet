@@ -21,6 +21,9 @@ NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotific
                                                  withMethod:@selector(qcoMockAlertView_show)];
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
+
 - (id)initQCOMockWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...
 {
     self = [super init];
@@ -40,6 +43,9 @@ NSString *const QCOMockAlertViewShowNotification = @"QCOMockAlertViewShowNotific
     }
     return self;
 }
+
+#pragma clang diagnostic pop
+
 
 - (NSUInteger)qcoMockAlertView_addButtonWithTitle:(NSString *)title
 {
