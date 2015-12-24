@@ -406,6 +406,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.qualitycoding.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MockUIAlertViewActionSheetSample;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockUIAlertViewActionSheetSample.app/MockUIAlertViewActionSheetSample";
@@ -422,6 +423,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.qualitycoding.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MockUIAlertViewActionSheetSample;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MockUIAlertViewActionSheetSample.app/MockUIAlertViewActionSheetSample";
