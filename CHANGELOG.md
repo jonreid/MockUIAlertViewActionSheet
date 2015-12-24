@@ -1,6 +1,6 @@
-Version 1.1.0
+Version 1.1.1
 -------------
-_23 Dec 2015_
+_24 Dec 2015_
 
 - Repackage as Cocoa Touch Framework project.
 - Support Carthage.
