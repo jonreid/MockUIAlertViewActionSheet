@@ -79,7 +79,6 @@ in the test fixture.
 Information about the action sheet is then available through the
 [QCOMockActionSheetVerifier](https://github.com/jonreid/MockUIAlertViewActionSheet/blob/master/Source/MockUIAlertViewActionSheet/QCOMockActionSheetVerifier.h).
 
-
 ### Can I see some examples?
 
-See the sample app. Run it to see what it does, then read the tests.
+See the sample app. Run it to see what it does, then read the ViewController tests.
