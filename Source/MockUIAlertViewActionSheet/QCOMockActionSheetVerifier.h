@@ -26,6 +26,6 @@
  * @discussion Instantiating a QCOMockActionSheetVerifier swizzles UIActionSheet. It remains
  * swizzled until the QCOMockActionSheetVerifier is deallocated.
  */
-- (id)init;
+- (instancetype)init;
 
 @end

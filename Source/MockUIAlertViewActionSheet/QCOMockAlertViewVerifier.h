@@ -24,6 +24,6 @@
  * @discussion Instantiating a QCOMockAlertViewVerifier swizzles UIAlertView. It remains swizzled
  * until the QCOMockAlertViewVerifier is deallocated.
  */
-- (id)init;
+- (instancetype)init;
 
 @end
