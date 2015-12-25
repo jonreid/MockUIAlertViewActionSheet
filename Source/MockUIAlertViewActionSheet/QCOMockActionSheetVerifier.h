@@ -4,8 +4,11 @@
 #import <UIKit/UIKit.h>
 
 
-/**
-    Captures mock UIActionSheet arguments.
+/*!
+ * @abstract Captures mocked UIActionSheet arguments.
+ * @discussion Instantiate a QCOMockActionSheetVerifier before the execution phase of the test. Then
+ * invoke the code to create and present your alert. Information about the alert is then available
+ * through the QCOMockActionSheetVerifier.
  */
 @interface QCOMockActionSheetVerifier : NSObject
 
@@ -18,6 +21,11 @@
 @property (nonatomic, copy) NSArray *otherButtonTitles;
 @property (nonatomic, assign) UIActionSheetStyle actionSheetStyle;
 
+/*!
+ * @abstract Initializes a newly allocated verifier.
+ * @discussion Instantiating a QCOMockActionSheetVerifier swizzles UIActionSheet. It remains
+ * swizzled until the QCOMockActionSheetVerifier is deallocated.
+ */
 - (id)init;
 
 @end

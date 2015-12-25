@@ -4,8 +4,11 @@
 #import <Foundation/Foundation.h>
 
 
-/**
-    Captures mocked UIAlertView arguments.
+/*!
+ * @abstract Captures mocked UIAlertView arguments.
+ * @discussion Instantiate a QCOMockAlertViewVerifier before the execution phase of the test. Then
+ * invoke the code to create and present your alert. Information about the alert is then available
+ * through the QCOMockAlertViewVerifier.
  */
 @interface QCOMockAlertViewVerifier : NSObject
 
@@ -16,6 +19,11 @@
 @property (nonatomic, copy) NSString *cancelButtonTitle;
 @property (nonatomic, copy) NSArray *otherButtonTitles;
 
+/*!
+ * @abstract Initializes a newly allocated verifier.
+ * @discussion Instantiating a QCOMockAlertViewVerifier swizzles UIAlertView. It remains swizzled
+ * until the QCOMockAlertViewVerifier is deallocated.
+ */
 - (id)init;
 
 @end
