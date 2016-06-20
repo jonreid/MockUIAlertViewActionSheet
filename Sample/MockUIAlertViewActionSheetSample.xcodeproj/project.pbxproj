@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E14BA831C2B008200314F3E /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14BA811C2B008200314F3E /* OCHamcrestIOS.framework */; };
 		0E748F971B6543A000B29AED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E748F961B6543A000B29AED /* main.m */; };
 		0E748F9A1B6543A000B29AED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E748F991B6543A000B29AED /* AppDelegate.m */; };
 		0E748F9D1B6543A000B29AED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E748F9C1B6543A000B29AED /* ViewController.m */; };
 		0E748FA01B6543A000B29AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E748F9E1B6543A000B29AED /* Main.storyboard */; };
 		0E748FA21B6543A000B29AED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E748FA11B6543A000B29AED /* Images.xcassets */; };
+		0EA2B4A81D1770B300B5D67B /* OCHamcrestIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA2B4A61D1770B300B5D67B /* OCHamcrestIOS.framework */; };
 		0EE234231C2A5F81005CDE32 /* MockUIAlertViewActionSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE234201C2A5F29005CDE32 /* MockUIAlertViewActionSheet.framework */; };
 		609E9B9655FA38A27FF87A2D /* ViewControllerTests-OCHamcrest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E9314897852939CA75DFB /* ViewControllerTests-OCHamcrest.m */; };
 		609E9F1E2EC677BB9B797C36 /* ViewControllerTests-PlainXCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 609E96C55D81BBE28BD81748 /* ViewControllerTests-PlainXCTest.m */; };
@@ -43,8 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E14BA801C2B008200314F3E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		0E14BA811C2B008200314F3E /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		0E748F911B6543A000B29AED /* MockUIAlertViewActionSheetSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockUIAlertViewActionSheetSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E748F951B6543A000B29AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E748F961B6543A000B29AED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		0E748FA11B6543A000B29AED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E748FAA1B6543A000B29AED /* MockUIAlertViewActionSheetSample.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockUIAlertViewActionSheetSample.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E748FAF1B6543A000B29AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EA2B4A51D1770B300B5D67B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		0EA2B4A61D1770B300B5D67B /* OCHamcrestIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCHamcrestIOS.framework; sourceTree = "<group>"; };
 		0EE2341B1C2A5F29005CDE32 /* MockUIAlertViewActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MockUIAlertViewActionSheet.xcodeproj; path = ../Source/MockUIAlertViewActionSheet.xcodeproj; sourceTree = "<group>"; };
 		0EF849A61C2A621B00862CC9 /* XcodeWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = XcodeWarnings.xcconfig; path = ../../Source/XcodeWarnings.xcconfig; sourceTree = "<group>"; };
 		609E9314897852939CA75DFB /* ViewControllerTests-OCHamcrest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewControllerTests-OCHamcrest.m"; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E14BA831C2B008200314F3E /* OCHamcrestIOS.framework in Frameworks */,
+				0EA2B4A81D1770B300B5D67B /* OCHamcrestIOS.framework in Frameworks */,
 				0EE234231C2A5F81005CDE32 /* MockUIAlertViewActionSheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,15 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E14BA7F1C2B008200314F3E /* OCHamcrest-5.1.0 */ = {
-			isa = PBXGroup;
-			children = (
-				0E14BA801C2B008200314F3E /* LICENSE.txt */,
-				0E14BA811C2B008200314F3E /* OCHamcrestIOS.framework */,
-			);
-			path = "OCHamcrest-5.1.0";
-			sourceTree = "<group>";
-		};
 		0E748F881B6543A000B29AED = {
 			isa = PBXGroup;
 			children = (
@@ -137,7 +128,7 @@
 		0E748FAD1B6543A000B29AED /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0E14BA7F1C2B008200314F3E /* OCHamcrest-5.1.0 */,
+				0EA2B4A41D1770B300B5D67B /* OCHamcrest-5.4.0 */,
 				0E748FAE1B6543A000B29AED /* Supporting Files */,
 				609E9314897852939CA75DFB /* ViewControllerTests-OCHamcrest.m */,
 				609E96C55D81BBE28BD81748 /* ViewControllerTests-PlainXCTest.m */,
@@ -151,6 +142,15 @@
 				0E748FAF1B6543A000B29AED /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EA2B4A41D1770B300B5D67B /* OCHamcrest-5.4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				0EA2B4A51D1770B300B5D67B /* LICENSE.txt */,
+				0EA2B4A61D1770B300B5D67B /* OCHamcrestIOS.framework */,
+			);
+			path = "OCHamcrest-5.4.0";
 			sourceTree = "<group>";
 		};
 		0EE2341C1C2A5F29005CDE32 /* Products */ = {
@@ -398,7 +398,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Tests/OCHamcrest-5.1.0",
+					"$(PROJECT_DIR)/Tests/OCHamcrest-5.4.0",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -419,7 +419,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Tests/OCHamcrest-5.1.0",
+					"$(PROJECT_DIR)/Tests/OCHamcrest-5.4.0",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
